@@ -12,8 +12,13 @@ public class IndianCensusAnalyserTest {
     }
 
     @AfterAll
-    public void afterDisplayMessege(){
+    public static void afterDisplayMessege(){
         System.out.println("Test Pass/Run");
     }
 
+    @Test
+    void given_file_should_return_information() {
+        CensusAnalyser censusAnalyser = new CensusAnalyser();
+        censusAnalyser.readData();
+    }
 }
